@@ -26,21 +26,40 @@ public class InterfaceGrafica extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1_Adicionar_Aluno = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jButton1_Adicionar_Aluno.setText("Adicionar Aluno");
+        jButton1_Adicionar_Aluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1_Adicionar_AlunoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton1_Adicionar_Aluno)
+                .addContainerGap(697, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(309, Short.MAX_VALUE)
+                .addComponent(jButton1_Adicionar_Aluno)
+                .addGap(19, 19, 19))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1_Adicionar_AlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_Adicionar_AlunoActionPerformed
+      System.out.println("Esse é um exemplo de ActionEvent");  // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1_Adicionar_AlunoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +97,6 @@ public class InterfaceGrafica extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1_Adicionar_Aluno;
     // End of variables declaration//GEN-END:variables
 }
