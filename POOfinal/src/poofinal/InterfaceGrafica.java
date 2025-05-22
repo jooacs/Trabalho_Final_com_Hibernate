@@ -29,68 +29,92 @@ public class InterfaceGrafica extends javax.swing.JFrame {
     private void initComponents() {
 
         PPainel = new javax.swing.JPanel();
-        Adicionar_Alunos = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        Ver_dados = new javax.swing.JPanel();
+        Principal = new javax.swing.JPanel();
+        Titulo = new javax.swing.JLabel();
+        Aluno = new javax.swing.JButton();
+        Opções = new javax.swing.JLabel();
+        TXT = new javax.swing.JButton();
+        Hibernate = new javax.swing.JButton();
+        Alunos = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         PPainel.setLayout(new java.awt.CardLayout());
 
-        jLabel1.setText("Painel 1");
+        Titulo.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Titulo.setText("Sistema de Gerenciamento de aluno");
 
-        jButton1.setText("Ir para 2");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Aluno.setText("Aluno");
+        Aluno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                AlunoActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout Adicionar_AlunosLayout = new javax.swing.GroupLayout(Adicionar_Alunos);
-        Adicionar_Alunos.setLayout(Adicionar_AlunosLayout);
-        Adicionar_AlunosLayout.setHorizontalGroup(
-            Adicionar_AlunosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Adicionar_AlunosLayout.createSequentialGroup()
+        Opções.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Opções.setText("OPÇÕES:");
+
+        TXT.setText(".TXT");
+
+        Hibernate.setText("Hibernate");
+
+        javax.swing.GroupLayout PrincipalLayout = new javax.swing.GroupLayout(Principal);
+        Principal.setLayout(PrincipalLayout);
+        PrincipalLayout.setHorizontalGroup(
+            PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PrincipalLayout.createSequentialGroup()
+                .addContainerGap(115, Short.MAX_VALUE)
+                .addComponent(Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(103, 103, 103))
+            .addGroup(PrincipalLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(Adicionar_AlunosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jButton1))
-                .addContainerGap(516, Short.MAX_VALUE))
+                .addComponent(Opções, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Aluno)
+                .addGap(18, 18, 18)
+                .addComponent(TXT)
+                .addGap(18, 18, 18)
+                .addComponent(Hibernate)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        Adicionar_AlunosLayout.setVerticalGroup(
-            Adicionar_AlunosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Adicionar_AlunosLayout.createSequentialGroup()
+        PrincipalLayout.setVerticalGroup(
+            PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PrincipalLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 266, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(40, 40, 40))
+                .addComponent(Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
+                .addGroup(PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Aluno)
+                    .addComponent(Opções, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TXT)
+                    .addComponent(Hibernate))
+                .addGap(24, 24, 24))
         );
 
-        PPainel.add(Adicionar_Alunos, "card2");
+        PPainel.add(Principal, "card2");
 
         jLabel2.setText("Painel 2");
 
-        javax.swing.GroupLayout Ver_dadosLayout = new javax.swing.GroupLayout(Ver_dados);
-        Ver_dados.setLayout(Ver_dadosLayout);
-        Ver_dadosLayout.setHorizontalGroup(
-            Ver_dadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Ver_dadosLayout.createSequentialGroup()
+        javax.swing.GroupLayout AlunosLayout = new javax.swing.GroupLayout(Alunos);
+        Alunos.setLayout(AlunosLayout);
+        AlunosLayout.setHorizontalGroup(
+            AlunosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AlunosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
                 .addContainerGap(547, Short.MAX_VALUE))
         );
-        Ver_dadosLayout.setVerticalGroup(
-            Ver_dadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Ver_dadosLayout.createSequentialGroup()
+        AlunosLayout.setVerticalGroup(
+            AlunosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AlunosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
                 .addContainerGap(329, Short.MAX_VALUE))
         );
 
-        PPainel.add(Ver_dados, "card3");
+        PPainel.add(Alunos, "card3");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -106,10 +130,10 @@ public class InterfaceGrafica extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void AlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AlunoActionPerformed
      CardLayout cl = (CardLayout) PPainel.getLayout();
 cl.show(PPainel, "card3");
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_AlunoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -147,11 +171,14 @@ cl.show(PPainel, "card3");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Adicionar_Alunos;
+    private javax.swing.JButton Aluno;
+    private javax.swing.JPanel Alunos;
+    private javax.swing.JButton Hibernate;
+    private javax.swing.JLabel Opções;
     private javax.swing.JPanel PPainel;
-    private javax.swing.JPanel Ver_dados;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel Principal;
+    private javax.swing.JButton TXT;
+    private javax.swing.JLabel Titulo;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
