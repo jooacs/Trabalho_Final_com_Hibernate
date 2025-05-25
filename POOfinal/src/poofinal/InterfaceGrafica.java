@@ -1,8 +1,8 @@
+package poofinal;
 
 package poofinal;
 
 import java.awt.CardLayout;
-import java.util.ArrayList;
 
 
 public class InterfaceGrafica extends javax.swing.JFrame {
@@ -403,10 +403,8 @@ cl.show(PPainel, "card3");
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new InterfaceGrafica().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+new InterfaceGrafica().setVisible(true);
         });
     }
 
@@ -443,4 +441,4 @@ cl.show(PPainel, "card3");
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
-}
+

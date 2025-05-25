@@ -53,7 +53,6 @@ package poofinal;
         }
         public int getIdade() {
             return idade; }
-        
-         
+    
     }
     
